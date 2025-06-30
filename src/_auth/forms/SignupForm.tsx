@@ -4,7 +4,8 @@ import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessag
 
 
 import { Button } from "@/components/ui/button"
-import type { Resolver } from "react-hook-form"
+import { useForm } from "react-hook-form"
+import { Input } from "@/components/ui/input"
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 })
@@ -26,9 +27,9 @@ const SignupForm = () => {
     console.log(values)
   }
   return (
-     <div className="flex min-h-svh flex-col items-center justify-center">
+    <div className="flex min-h-svh flex-col items-center justify-center">
       <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
             name="username"
@@ -47,14 +48,10 @@ const SignupForm = () => {
           />
           <Button type="submit">Submit</Button>
         </form>
-    </Form>
+      </Form>
     </div>
     
   )
 }
 
 export default SignupForm
-
-function useForm<T>(arg0: { resolver: Resolver<{ username: string }, unknown, { username: string }>; defaultValues: { username: string } }) {
-  throw new Error("Function not implemented.")
-}

@@ -13,6 +13,7 @@ export type IUpdateUser = {
   file: File[];
 };
 
+
 export type INewPost = {
   userId: string;
   caption: string;

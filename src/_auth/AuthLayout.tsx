@@ -12,11 +12,17 @@ const AuthLayout = () => {
         <section className="flex flex-1 justify-center items-center flex-colpy-10"> 
         <Outlet/>
         </section>
-        <img src="/assets/images/side-img.svg" alt="logo" className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"/>
+
+
+        <img 
+        src="/assets/images/side-img.svg" 
+        alt="logo" 
+        className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"
+        />
       </>
     )}
     </>
-  )
+  );
 }
 
 export default AuthLayout

@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import './globals.css';
+// Make sure 'globals.css' exists in the 'src' folder, or update the path below if it's located elsewhere.
+import './globals.css'; 
 import SigninForm from './_auth/forms/SigninForm';
 import { Home } from './_root/pages';
 import SignupForm from './_auth/forms/SignupForm';
 import AuthLayout from './_auth/AuthLayout';
 import RootLayout from './_root/RootLayout';
+import { Toaster } from "@/components/ui/toaster"
 const App = () => {
   return (
     <main className="flex h-screen">
@@ -22,6 +24,7 @@ const App = () => {
             </Route>
             
         </Routes>
+        <Toaster />
     </main>
   )
 };
